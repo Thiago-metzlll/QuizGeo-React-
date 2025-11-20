@@ -1,6 +1,6 @@
 function Points({ pontuacao, quizData }) {
   if (typeof pontuacao !== 'number' || !Array.isArray(quizData)) {
-    return null; // ou um fallback visível
+    return null; 
   }
     
 return<>

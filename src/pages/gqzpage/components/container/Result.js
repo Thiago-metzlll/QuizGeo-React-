@@ -1,6 +1,6 @@
 function Result({ feedback }) {
   if (typeof feedback !== 'string') {
-    return null; // ou um loading, ou um parágrafo vazio
+    return null; 
   }
   return <>
     <p
