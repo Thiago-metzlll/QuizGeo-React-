@@ -4,7 +4,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 16px;
    
-  height: 120px; // ou o valor que você definiu em alturaCartao
+  height: 120px; 
   width: 250px;
   
   display: flex;
@@ -62,7 +62,7 @@
 
 
 .DeleteButton {
-  background-color: #e74c3c; // vermelho de alerta
+  background-color: #e74c3c; 
   color: white;
   border: none;
   padding: 8px 12px;
@@ -73,11 +73,11 @@
   transition: background-color 0.2s ease;
 
   &:hover {
-    background-color: #c0392b; // tom mais escuro no hover
+    background-color: #c0392b; 
   }
 
   &:active {
-    background-color: #a93226; // tom ainda mais escuro no clique
+    background-color: #a93226; 
   }
 
   svg {
@@ -93,8 +93,7 @@
 
 
  .EditButton {
-    background-color: #104715; // vermelho de alerta
-  color: white;
+    background-color: #104715; 
   border: none;
   padding: 8px 12px;
   border-radius: 6px;
@@ -104,11 +103,11 @@
   transition: background-color 0.2s ease;
 
   &:hover {
-    background-color: #186b1f; // tom mais escuro no hover
+    background-color: #186b1f; 
   }
 
   &:active {
-    background-color: #a93226; // tom ainda mais escuro no clique
+    background-color: #a93226; 
   }
 
   svg {

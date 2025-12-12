@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './Geoquiz.css';
-// import EarthLoader from './components/ui/EarthLoader';
 import ContainerPoints from './components/container/ContainerPoints';
 import QuizBlock from './components/container/QuizBlock';
 import quizData from './components/QuestionsArray';
@@ -18,7 +17,7 @@ function GeoquizPage() {
   const pergunta = quizData[perguntaAtual];
 
   const handleRespostaClick = (index) => {
-    if (respostaSelecionada !== null) return; // Evita múltiplos cliques
+    if (respostaSelecionada !== null) return; 
 
     setRespostaSelecionada(index);
     if (index === pergunta.correta) {
@@ -39,7 +38,6 @@ function GeoquizPage() {
     }
   };
 
-  // const progresso = ((perguntaAtual) / quizData.length) * 100;
 
   return (
     <div className="App">

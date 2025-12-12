@@ -1,4 +1,4 @@
-import { BrowserRouter } from 'react-router-dom'; // Use BrowserRouter ou MemoryRouter
+import { BrowserRouter } from 'react-router-dom'; 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 

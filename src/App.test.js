@@ -11,11 +11,9 @@ describe('App', () => {
       </MemoryRouter>
     );
 
-    // Verifica se o Header está na tela
-    expect(screen.getByText(/header/i)).toBeInTheDocument(); // Ajuste esse texto para algo que o Header renderize
+    expect(screen.getByText(/header/i)).toBeInTheDocument(); 
 
-    // Verifica se algo da GeoquizPage aparece (ajuste para um texto ou elemento presente)
-    expect(screen.getByText(/geoquiz/i)).toBeInTheDocument(); // ajuste conforme seu componente
+    expect(screen.getByText(/geoquiz/i)).toBeInTheDocument(); 
 
   });
 
@@ -26,7 +24,6 @@ describe('App', () => {
       </MemoryRouter>
     );
 
-    // Verifique algo do LoginPage renderizado, como texto ou botão
     expect(screen.getByRole('button', { name: /login/i })).toBeInTheDocument(); // ajuste conforme seu LoginPage
   });
 
@@ -37,7 +34,6 @@ describe('App', () => {
       </MemoryRouter>
     );
 
-    // Verifica se o formulário de cadastro está na tela
     expect(screen.getByLabelText(/nome/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/email/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/senha/i)).toBeInTheDocument();

@@ -1,4 +1,3 @@
-// src/components/CadastroForm/CadastroForm.jsx
 import React, { useState } from 'react';
 import styles from './Cadastro.module.scss';
 import { useNavigate } from 'react-router-dom';

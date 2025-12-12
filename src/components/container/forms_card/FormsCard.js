@@ -9,14 +9,12 @@ function FormsCard() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Pega o cartão que veio pela navegação (se houver)
   const cartaoEdit = location.state?.cartao;
 
   const [nome, setNome] = useState('');
   const [descricao, setDescricao] = useState('');
   const [imagem, setImagem] = useState('');
 
-  // Quando carregar o componente, se existir cartão para editar, popula os campos
   useEffect(() => {
     if (cartaoEdit) {
       setNome(cartaoEdit.nome);
@@ -29,7 +27,7 @@ function FormsCard() {
     e.preventDefault();
 
     const novoCartao = {
-      ...cartaoEdit, // mantém o id se existir (para editar)
+      ...cartaoEdit, 
       nome,
       descricao,
       imagem,
@@ -39,19 +37,16 @@ function FormsCard() {
     const dados = localStorage.getItem('cartoes');
     const cartoes = dados ? JSON.parse(dados) : [];
 
-    // Atualiza o cartão na lista se estiver editando, senão adiciona um novo com id único
     let cartoesAtualizados;
     if (cartaoEdit) {
       cartoesAtualizados = cartoes.map((c) =>
         c.id === novoCartao.id ? novoCartao : c
       );
     } else {
-      // Cria um id novo baseado no maior id + 1
       const novoId = cartoes.length > 0 ? Math.max(...cartoes.map(c => c.id)) + 1 : 1;
       cartoesAtualizados = [...cartoes, { ...novoCartao, id: novoId }];
     }
 
-    // Salva a lista atualizada no localStorage
     localStorage.setItem('cartoes', JSON.stringify(cartoesAtualizados));
 
     alert('Cartão salvo!');

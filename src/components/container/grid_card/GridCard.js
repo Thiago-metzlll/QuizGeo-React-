@@ -7,7 +7,7 @@ import styles from './GridCard.module.scss'
 
 function GridCard({ cartoes, onEdit, onDelete, onAdd, larguraCartao = 250, alturaCartao = 120, GAP = 10 }) {
   const colunas = 5;
-  const linhas = Math.ceil((cartoes.length + 1) / colunas); // +1 para botão "Adicionar"
+  const linhas = Math.ceil((cartoes.length + 1) / colunas); 
   const cellWidth = larguraCartao + GAP;
   const cellHeight = alturaCartao + GAP;
 

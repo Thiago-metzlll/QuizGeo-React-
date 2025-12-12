@@ -1,23 +1,23 @@
 .TextBtn {
-  background: none;        /* sem fundo */
-  border: none;            /* sem borda */
-  padding: 0;              /* remove espaçamento padrão */
-  color: #0645AD;          /* cor azul típica de links */
-  text-decoration: underline; /* sublinhado, igual link */
-  cursor: pointer;         /* muda cursor pra mãozinha */
-  font-size: inherit;      /* mantém o tamanho da fonte do pai */
-  font-family: inherit;    /* mantém a fonte do pai */
+  background: none;        
+  border: none;            
+  padding: 0;              
+  color: #0645AD;          
+  text-decoration: underline; 
+  cursor: pointer;         
+  font-size: inherit;      
+  font-family: inherit;    
 }
 
 .TextBtn:hover {
-  color: #0B0080;          /* azul mais escuro ao passar o mouse */
+  color: #0B0080;          
 }
 
 .TextBtn:active {
-  color: #041E42;          /* azul bem escuro ao clicar */
+  color: #041E42;          
 }
 
 .TextBtn:focus {
-  outline: 1px dotted #0645AD; /* foco acessível */
+  outline: 1px dotted #0645AD; 
   outline-offset: 2px;
 }

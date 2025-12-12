@@ -18,7 +18,7 @@ function LoginPage() {
     const navigate = useNavigate();
 
     const senhaTeste = '123456';
-    const emailTeste = 'thiagostopla@gmail.com'
+    const emailTeste = 'usuarioteste@gmail.com'
 
 
 
@@ -54,14 +54,14 @@ function LoginPage() {
     };
     return <>
         <div className={styles.bodylogin}>
-            <LoginText texto="Login!" />
+            <LoginText texto="Login (para ter acesso aos cartões)!" />
             <Input
-                placeholder="Usuário"
+                placeholder="Usuário (tente: usuarioteste@gmail.com)"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
             />            {emailError && <p style={{ color: 'red' }}>{emailError}</p>}
             <Input
-                placeholder="Senha"
+                placeholder="Senha (tente: 123456)"
                 type="password"
                 value={senha}
                 onChange={e => setSenha(e.target.value)}
@@ -70,7 +70,7 @@ function LoginPage() {
 
             <EnterBtn texto="Entrar" onClick={handleLogin} />
             <EnterpriseBtn icon={faCircleUser} />
-            <TextBtn texto="Criar contaaaa" />
+            <TextBtn texto="Criar conta" />
 
 
 
