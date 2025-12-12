@@ -1,3 +1,3 @@
 Este projeto é uma evolução do quiz de geografia feito em JS puro. Ele foi feito em React, com foco em componentização. Usamos rotas privadas e contexto global para modo claro e escuro. Usamos vários hooks para manipular o estado da tela, um dele é o LocalStorage,onde todos os dados são guardados.
-No projeto podemos criar, editar ou deletar cartões, feito inteiramente para frontend, sem apis ou backend próprio, por isso hospedamos ele no Vercel: https://vercel.com/thiagos-projects-1de5c76e/loginpage-1sct/D4d9RLxkJYrBuYWwxhSupSshzYx4 
+No projeto podemos criar, editar ou deletar cartões, feito inteiramente para frontend, sem apis ou backend próprio, por isso hospedamos ele no Vercel (assim que puder, vou atualizar a versão online, que está defazada): https://loginpage-1sct.vercel.app/
 Ainda preciso fazer ajustes de UX, como responsividade em diferentes navegadores.
