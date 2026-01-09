@@ -17,7 +17,7 @@ function GeoquizPage() {
   const pergunta = quizData[perguntaAtual];
 
   const handleRespostaClick = (index) => {
-    if (respostaSelecionada !== null) return; 
+    if (respostaSelecionada !== null) return;
 
     setRespostaSelecionada(index);
     if (index === pergunta.correta) {
@@ -48,13 +48,12 @@ function GeoquizPage() {
             respostaSelecionada={respostaSelecionada}
             handleRespostaClick={handleRespostaClick}
             handleProxima={handleProxima}
-            
+
             feedback={feedback} />
         ) : (
           <ContainerPoints pontuacao={pontuacao} total={quizData.length} />
         )}
       </main>
-      <footer></footer>
     </div>
   );
 }

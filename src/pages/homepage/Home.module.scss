@@ -1,8 +1,12 @@
 .Homebody {
-  background-image: url('./../../assets/Facade_opera_Garnier.jpg');
-  background-size: 1150px auto;
-  background-color: rgba(0, 0, 0, 0.5); // cor escura sem opacidade total
-  background-blend-mode: darken; // mistura a imagem com a cor
-  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./../../assets/Facade_opera_Garnier.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: calc(100vh - 70px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
-

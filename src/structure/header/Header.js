@@ -8,7 +8,6 @@ function Header() {
             <Link className={styles.link} to={'/'}>QuizGeo</Link>
             <Link className={styles.link} to={'/login'}>Login</Link>
             <Link className={styles.link} to={'/cards'}>Cards</Link>
-            <Link className={styles.link} to={'/cadastro'}>Cadastrar</Link>
             <BtnTheme className={styles.btnTheme} />
         </header>
     </>

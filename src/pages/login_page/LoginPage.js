@@ -11,14 +11,14 @@ import { useNavigate } from 'react-router-dom';
 
 
 function LoginPage() {
-    const [email, setEmail] = useState('');
+    const emailTeste = 'usuarioteste@gmail.com';
+    const senhaTeste = '123456';
+
+    const [email, setEmail] = useState(emailTeste);
     const [emailError, setEmailError] = useState('');
-    const [senha, setSenha] = useState('');
+    const [senha, setSenha] = useState(senhaTeste);
     const [senhaError, setSenhaError] = useState('');
     const navigate = useNavigate();
-
-    const senhaTeste = '123456';
-    const emailTeste = 'usuarioteste@gmail.com'
 
 
 
@@ -52,31 +52,42 @@ function LoginPage() {
             navigate('/cards');
         }
     };
-    return <>
+    return (
         <div className={styles.bodylogin}>
-            <LoginText texto="Login (para ter acesso aos cartões)!" />
-            <Input
-                placeholder="Usuário (tente: usuarioteste@gmail.com)"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-            />            {emailError && <p style={{ color: 'red' }}>{emailError}</p>}
-            <Input
-                placeholder="Senha (tente: 123456)"
-                type="password"
-                value={senha}
-                onChange={e => setSenha(e.target.value)}
-            />
-            {senhaError && <p style={{ color: 'red' }}>{senhaError}</p>}
+            <div className={styles.loginContainer}>
+                <LoginText texto="Login" />
+                <p className={styles.subtitle}>Acesse seus cartões e quizzes</p>
 
-            <EnterBtn texto="Entrar" onClick={handleLogin} />
-            <EnterpriseBtn icon={faCircleUser} />
-            <TextBtn texto="Criar conta" />
+                <div className={styles.inputGroup}>
+                    <Input
+                        placeholder="Usuário"
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
+                    />
+                    {emailError && <p className={styles.errorMessage}>{emailError}</p>}
+                </div>
 
+                <div className={styles.inputGroup}>
+                    <Input
+                        placeholder="Senha"
+                        type="password"
+                        value={senha}
+                        onChange={e => setSenha(e.target.value)}
+                    />
+                    {senhaError && <p className={styles.errorMessage}>{senhaError}</p>}
+                </div>
 
+                <div className={styles.buttonGroup}>
+                    <EnterBtn texto="Entrar" onClick={handleLogin} />
+                </div>
 
-            <div id='teste'></div>
+                <div className={styles.footer}>
+                    <span>Entrar como empresa</span>
+                    <EnterpriseBtn icon={faCircleUser} />
+                </div>
+            </div>
         </div>
-    </>
+    );
 }
 
 export default LoginPage

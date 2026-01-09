@@ -27,7 +27,7 @@ function FormsCard() {
     e.preventDefault();
 
     const novoCartao = {
-      ...cartaoEdit, 
+      ...cartaoEdit,
       nome,
       descricao,
       imagem,
@@ -50,7 +50,7 @@ function FormsCard() {
     localStorage.setItem('cartoes', JSON.stringify(cartoesAtualizados));
 
     alert('Cartão salvo!');
-    navigate('/home');
+    navigate('/cards');
   };
 
   return (

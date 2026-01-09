@@ -1,32 +1,46 @@
 .header {
-  background-color: var(--header-bg);
-  color: var(--header-text);
-  padding: 10px 20px;
+  background: var(--header-bg, rgba(15, 23, 42, 0.8));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--header-text, white);
+  padding: 0 40px;
   display: flex;
-  justify-content: flex-end;  
+  justify-content: flex-end;
   align-items: center;
-  gap: 15px;                  
-  height: 7vh;
+  gap: 20px;
+  height: 70px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+:global([data-theme='light']) .header {
+  background: rgba(241, 245, 249, 0.9);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  color: #1e293b;
 }
 
 .link {
-  background-color: #397c8f;
-  color: #282c34;
-  padding: 8px 16px;
-  border-radius: 4px;
+  color: inherit;
+  padding: 8px 12px;
   text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-  border: none;
-  cursor: pointer;
-  display: inline-block;
-  user-select: none;
-}
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  opacity: 0.8;
 
-.link:hover {
-  background-color: #21a1f1;
+  &:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #397c8f;
+    transform: translateY(-1px);
+  }
 }
 
 .btnTheme {
-  margin-left: 1rem;
+  margin-left: 10px;
 }
